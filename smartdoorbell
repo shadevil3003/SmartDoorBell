@@ -1,0 +1,19 @@
+Raspberry Pi 3 - Smart Doorbell
+
+Introduction:-
+Suppose you are sitting at the comforts of your room with your earphones plugged in and someone rings your doorbell , You wont know about it since you have your earphones plugged in . So to tackle this situation of carelessness we came up with a Smart Doorbell . This doorbell would send the notification to your phone whenever it detects a person near it(<20cm) along with the photo of the person. 
+
+Materials:-
+1)Raspberry Pi 3
+2)Ultrasonic Sensor
+3)Usb WebCam
+4)Jumper Wires
+5)BreadBoard
+
+Circuit:-
+Vcc - 5v
+Echo - GPIO23
+Trig - GPIO18
+Gnd - Gnd
+
+
