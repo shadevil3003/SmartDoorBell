@@ -3,6 +3,9 @@ import telepot
 from telepot.loop import MessageLoop
 import os
 import RPi.GPIO as GPIO
+from gpiozero import Buzzer
+from time import sleep
+buzzer=Buzzer(24)
 #GPIO Mode (BOARD / BCM)
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
@@ -56,8 +59,11 @@ if __name__ == '__main__':
         print(dist)
         if dist<20:
             telegram_bot = telepot.Bot('default_token')
+            buzzer.beep()
             action()
 
             MessageLoop(telegram_bot, action)
             print('Up and Running....')
+            buzzer.off()
+            sleep(1)
         time.sleep(1)
