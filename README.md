@@ -48,9 +48,11 @@ Gnd - Gnd
 
 1)(See Line 50 and 51) Change from the chat-id in the code to your chat-id . 
   telegram_bot.sendMessage (Chat_id, message)
+  
   telegram_bot.sendPhoto(Chat_id,photo=open("imagetest.jpg"))
   
 2)(See line 58) Change from the default_token to your token 
+  
   telegram_bot = telepot.Bot('default_token')
 
 **How to run .py file in Raspberry pi?**
