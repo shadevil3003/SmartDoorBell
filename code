@@ -47,15 +47,15 @@ def cam():
 def action():
     cam()
     message = "Clicked photo"
-    telegram_bot.sendMessage (671193983, message)
-    telegram_bot.sendPhoto(671193983,photo=open("imagetest.jpg"))
+    telegram_bot.sendMessage (chat_id, message)
+    telegram_bot.sendPhoto(chat_id,photo=open("imagetest.jpg"))
  
 if __name__ == '__main__':
     while True:
         dist=distance()
         print(dist)
         if dist<20:
-            telegram_bot = telepot.Bot('607989507:AAHIThkJ-vTesql96Zqn1IFMANiTkmD7L_A')
+            telegram_bot = telepot.Bot('default_token')
             action()
 
             MessageLoop(telegram_bot, action)
