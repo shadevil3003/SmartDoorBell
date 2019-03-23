@@ -10,17 +10,24 @@ Suppose you are sitting at the comforts of your room with your earphones plugged
 
 
 1)Raspberry Pi 3
+
 2)Ultrasonic Sensor
+
 3)Usb WebCam
+
 4)Jumper Wires
+
 5)BreadBoard
 
 **Circuit:-**
 
 
 Vcc - 5v
+
 Echo - GPIO23
+
 Trig - GPIO18
+
 Gnd - Gnd
 
 **Important :-**
@@ -28,8 +35,11 @@ Gnd - Gnd
 
 1)**Create your own bot .** if you don't know how to create one refer to the link below:-
   https://www.instructables.com/id/Set-up-Telegram-Bot-on-Raspberry-Pi/
+  
 2)**Know your chat id** :- 1.Open Telegram app and search "get id" or  "@get_id_bot"
+
                        2.Type "/start" , You will get your chat id
+                       
                        3.You can also refer to the video below :-
                          https://www.youtube.com/watch?v=2jdsvSKVXNs
 
@@ -39,6 +49,7 @@ Gnd - Gnd
 1)(See Line 50 and 51) Change from the chat-id in the code to your chat-id . 
   telegram_bot.sendMessage (Chat_id, message)
   telegram_bot.sendPhoto(Chat_id,photo=open("imagetest.jpg"))
+  
 2)(See line 58) Change from the default_token to your token 
   telegram_bot = telepot.Bot('default_token')
 
@@ -46,5 +57,7 @@ Gnd - Gnd
 
 
 1)Open terminal
+
 2)Go to the .py file location
+
 3)Type python file_name.py
