@@ -19,6 +19,7 @@ Suppose you are sitting at the comforts of your room with your earphones plugged
 
 5)BreadBoard
 
+
 **Circuit:-**
 
 
@@ -29,6 +30,7 @@ Echo - GPIO23
 Trig - GPIO18
 
 Gnd - Gnd
+
 
 **Important :-**
 
@@ -43,10 +45,12 @@ Gnd - Gnd
                        3.You can also refer to the video below :-
                          https://www.youtube.com/watch?v=2jdsvSKVXNs
 
+
 **Things to change in the code :-**
 
 
 1)(See Line 50 and 51) Change from the chat-id in the code to your chat-id . 
+  
   telegram_bot.sendMessage (Chat_id, message)
   
   telegram_bot.sendPhoto(Chat_id,photo=open("imagetest.jpg"))
@@ -54,6 +58,7 @@ Gnd - Gnd
 2)(See line 58) Change from the default_token to your token 
   
   telegram_bot = telepot.Bot('default_token')
+
 
 **How to run .py file in Raspberry pi?**
 
