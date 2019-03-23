@@ -19,6 +19,8 @@ Suppose you are sitting at the comforts of your room with your earphones plugged
 
 5)BreadBoard
 
+6)Buzzer
+
 
 **Circuit:-**
 
