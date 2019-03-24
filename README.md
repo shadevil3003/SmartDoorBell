@@ -31,8 +31,11 @@ Echo - GPIO23
 
 Trig - GPIO18
 
-Gnd - Gnd
+Gnd - Ground
 
+Buzzer(Red wire) - GPIO24
+
+Buzzer(Black wire) - Ground
 
 **Important :-**
 
@@ -42,10 +45,10 @@ Gnd - Gnd
   
 2)**Know your chat id** :- 1.Open Telegram app and search "get id" or  "@get_id_bot"
 
-                       2.Type "/start" , You will get your chat id
+                           2.Type "/start" , You will get your chat id
                        
-                       3.You can also refer to the video below :-
-                         https://www.youtube.com/watch?v=2jdsvSKVXNs
+                           3.You can also refer to the video below :-
+                             https://www.youtube.com/watch?v=2jdsvSKVXNs
 
 
 **Things to change in the code :-**
