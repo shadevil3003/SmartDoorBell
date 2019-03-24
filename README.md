@@ -40,7 +40,7 @@ Buzzer(Black wire) - Ground
 **Important :-**
 
 
-1)**Create your own bot .** if you don't know how to create one refer to the link below:-
+1)**Create your own bot .** If you don't know how to create one refer to the link below:-
   https://www.instructables.com/id/Set-up-Telegram-Bot-on-Raspberry-Pi/
   
 2)**Know your chat id** :- 1.Open Telegram app and search "get id" or  "@get_id_bot"
