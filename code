@@ -5,18 +5,21 @@ import os
 import RPi.GPIO as GPIO
 from gpiozero import Buzzer
 from time import sleep
-buzzer=Buzzer(24)
+
+buzzer = Buzzer(24)
+
+
 #GPIO Mode (BOARD / BCM)
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
  
 #set GPIO Pins
 GPIO_TRIGGER = 18
-GPIO_ECHO = 24
+GPIO_ECHO = 23
  
-#set GPIO direction (IN / OUT)
 GPIO.setup(GPIO_TRIGGER, GPIO.OUT)
 GPIO.setup(GPIO_ECHO, GPIO.IN)
+GPIO.setup(24, GPIO.OUT) #BUzzer
  
 def distance():
     # set Trigger to HIGH
@@ -45,25 +48,36 @@ def distance():
  
     return distance
 def cam():
-    os.system('fswebcam imagetest.jpg')
+    os.system('fswebcam --no-banner imagetest')#For clicking Pic
 
 def action():
     cam()
-    message = "Clicked photo"
-    telegram_bot.sendMessage (chat_id, message)
-    telegram_bot.sendPhoto(chat_id,photo=open("imagetest.jpg"))
+    message = "Someone's at the door !!!"
+    telegram_bot.sendMessage (761084539, message) # Add Chat ID
+    telegram_bot.sendPhoto(761084539,photo=open("imagetest"))
  
 if __name__ == '__main__':
     while True:
         dist=distance()
         print(dist)
         if dist<20:
-            telegram_bot = telepot.Bot('default_token')
-            buzzer.beep()
+            GPIO.output(24, True)
+            time.sleep(0.5) 
+            GPIO.output(24, False)
+            print("Motion Detected...")
+            telegram_bot = telepot.Bot('850662582:AAFZYs11fR_II-m7OAj2oGyhsiSqnz-PgwI')# Token ID 
+            buzzer.beep()#Buzzer turns on
             action()
 
             MessageLoop(telegram_bot, action)
-            print('Up and Running....')
-            buzzer.off()
+            print('Running Perfectly fine !!!')
+            buzzer.off()#Buzzer turns off
             sleep(1)
         time.sleep(1)
+        
+    
+    
+
+    
+        
+
